@@ -12,3 +12,15 @@ heights_and_ages_array[0,3] = 165
 
 # Print entire third column.
 print(heights_and_ages_array[:, 3)
+
+print(heights_and_ages_array.sum(axis = 0))
+print((heights_and_ages_array[:,0] == 51).sum())
+
+print(heights_and_ages_array[:,0] >= 182).sum())
+mask = heights_and_ages_array[:,0] >= 182
+tall_presidents = heights_and_ages_array[mask, ]
+print(tall_presidents)
+
+mask2 = (heights_and_ages_array[:,0] >= 182) & (heights_and_ages_array[:, 1] < 50)
+tall_and_young_presidents = heights_and_ages_array[mask2, ]
+print(tall_and_young_presidents)
