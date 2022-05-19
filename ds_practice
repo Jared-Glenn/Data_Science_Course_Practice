@@ -24,3 +24,23 @@ print(tall_presidents)
 mask2 = (heights_and_ages_array[:,0] >= 182) & (heights_and_ages_array[:, 1] < 50)
 tall_and_young_presidents = heights_and_ages_array[mask2, ]
 print(tall_and_young_presidents)
+
+
+
+################################################ Program Practice with Arrays
+
+import numpy as np
+
+num_rows, num_cols = [int(x) for x in input().split()]
+
+values = []
+for num in range(int(num_rows)):
+    values.append(input().split())
+
+values_array = np.array(values)
+values_array = values_array.astype(np.float16)
+
+means_array = values_array.mean(axis = 1)
+means_array = means_array.round(2)
+
+print(means_array)
