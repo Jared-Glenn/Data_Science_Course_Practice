@@ -25,12 +25,26 @@ price2 = {
 pairs1 = list(price1.items())
 pairs2 = list(price2.items())
 price = dict(pairs1 + pairs2)
-print(price)
+#print(price)
 
 price = {**price1, **price2}
 
-print(price)
+#print(price)
 
 price = price1 | price2
 
-print(price)
+#print(price)
+
+# LESSON THREE
+
+x = [("gamma", 0.1), ("alpha", -3), ("beta", 1.1), ("alpha", 0.5, 1)]
+
+print(x)
+
+# Corrected from sorted(x), which does not seem to work with tuples.
+x.sort()
+
+# sort() seems to order by the first element first and then orders by the second and
+# onward. Having more elements does not affect the sort. Strings are ordered
+# alphabetically.
+print(x)
