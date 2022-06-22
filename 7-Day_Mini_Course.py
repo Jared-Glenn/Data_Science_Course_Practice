@@ -51,7 +51,26 @@ x.sort()
 
 # LESSON FOUR
 
-coord = {"lat": 51.5072, "lon": -0.1276}
-print("latitude %(lat)f, longitude %(lon)f" % coord)
-print("latitude {lat}, longitude {lon}".format(**coord))
-print(f'latitude {coord["lat"]: 0.2f}, longitude {coord["lon"]: 0.2f}')
+# coord = {"lat": 51.5072, "lon": -0.1276}
+# print("latitude %(lat)f, longitude %(lon)f" % coord)
+# print("latitude {lat}, longitude {lon}".format(**coord))
+# print(f'latitude {coord["lat"]: 0.2f}, longitude {coord["lon"]: 0.2f}')
+
+# LESSON FIVE
+
+# mul3 = [n for n in range(1, 101) if n%3 == 0]
+# print(mul3)
+
+# table = [[m*n for n in range(1, 11)] for m in range(1, 11)]
+# for row in table:
+#     print(row)
+    
+# directions = [a+b for a in ["north", "south", ""] for b in ["east", "west", ""] if not (a=="" and b== "")]
+# print(directions)
+
+# double = {n: 2*n for n in range(1,11)}
+# print(double)
+
+keys = ["one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten"]
+length = {str: len(str) for str in keys}
+print(length)
