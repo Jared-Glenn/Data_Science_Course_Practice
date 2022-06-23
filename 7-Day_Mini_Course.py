@@ -71,6 +71,20 @@ x.sort()
 # double = {n: 2*n for n in range(1,11)}
 # print(double)
 
-keys = ["one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten"]
-length = {str: len(str) for str in keys}
-print(length)
+# keys = ["one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten"]
+# length = {str: len(str) for str in keys}
+# print(length)
+
+# LESSON SIX
+
+results = []
+for n in range(1, 11):
+    squared, cubed = n**2, n**3
+    results.append([n, squared, cubed])
+
+
+l = list(zip(*results))
+print(l)
+
+lst = [list(t) for t in zip(*results)]
+print(lst)
