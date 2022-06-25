@@ -77,14 +77,25 @@ x.sort()
 
 # LESSON SIX
 
-results = []
-for n in range(1, 11):
-    squared, cubed = n**2, n**3
-    results.append([n, squared, cubed])
+# results = []
+# for n in range(1, 11):
+#     squared, cubed = n**2, n**3
+#     results.append([n, squared, cubed])
 
 
-l = list(zip(*results))
-print(l)
+# l = list(zip(*results))
+# print(l)
 
-lst = [list(t) for t in zip(*results)]
-print(lst)
+# lst = [list(t) for t in zip(*results)]
+# print(lst)
+
+# LESSON SEVEN
+
+from functools import reduce
+
+def setbit(bitmap, bit):
+    return bitmap | (2**bit)
+
+assertbits = [1, 2, 0, 3]
+bitmap = reduce(setbit, assertbits, 0)
+print(bitmap)
